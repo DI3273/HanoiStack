@@ -12,22 +12,23 @@ typedef struct StackNode {
 typedef struct {
 	StackNode *top;
 } LinkedStackType;
-// 초기화 함수
+
+
 void init(LinkedStackType *s)
 {
 	s->top = NULL;
 }
-// 공백 상태 검출 함수
+
 int is_empty(LinkedStackType *s)
 {
 	return (s->top == NULL);
 }
-// 포화 상태 검출 함수
+
 int is_full(LinkedStackType *s)
 {
 	return 0;
 }
-// 삽입 함수  수정완
+
 void push(int n, char from, char tmp, char to, LinkedStackType *s)
 {
 	StackNode *temp = (StackNode *)malloc(sizeof(StackNode));
@@ -52,7 +53,6 @@ void pStack(int n, char from, char tmp, char to) {
 }
 
 
-// 수정일단 함 괜찮은지 모름
 void print_stack(LinkedStackType *s)
 {
 	printf("                      top\n");
@@ -63,7 +63,7 @@ void print_stack(LinkedStackType *s)
 	printf("NULL \n");
 	printf("_____________________________\n");
 }
-// 삭제 함수  수정완
+
 void pop(LinkedStackType *s)
 {
 	if (is_empty(s)) {
